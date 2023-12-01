@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<div class="jumbotron text-center">
+    {% if session.logged_in == NULL%}
+        <h2>Welcome to Automatic Suspicious Bangla Text Detection System</h2><br><br>
+        
+        <a href="/register" class="btn btn-primary btn-lg">Sign Up</a>
+        <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% else %}
+        <h3>Hi {{ session.s_name }}</h3><br><br>
+        
+        <a href="/text" class="btn btn-primary btn-lg">Let's Start</a>
+    {% endif %}
+</div>
+{% endblock %}
